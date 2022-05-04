@@ -229,6 +229,7 @@ class NRPNNullMessage extends MidiMessage {
   /// Stream to prevent accidental value changes on CC6 after a message has concluded.
   NRPNNullMessage({this.channel = 0});
 
+  @override
   void send() {
     data = Uint8List(6);
     // Data Entry MSB
@@ -343,6 +344,7 @@ class RPNNullMessage extends MidiMessage {
   /// Stream to prevent accidental value changes on CC6 after a message has concluded.
   RPNNullMessage({this.channel = 0});
 
+  @override
   void send() {
     data = Uint8List(6);
     // Data Entry MSB
